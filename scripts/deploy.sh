@@ -1,6 +1,17 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
+# Connect Travis CI with GitHub
+# Enable Travis CI integration for repo at https://travis-ci.org/
+# Create a key
+# > ssh-keygen -t rsa -b 4096 -C "ci@md-systems.ch" -f deploy_key -N ''
+# Encrypt key
+# > travis encrypt-file deploy_key
+# Keys are automatically added to Travis
+# Edit .travisci.yml with the new variable names.
+# Add the deploy_key.pub to GitHub deploy keys and drop it.
+# Add all other information and push to trigger the build.
+
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
