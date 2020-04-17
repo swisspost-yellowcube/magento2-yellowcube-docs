@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Update · GitBook</title>
+        <title>Stock management · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="background-updates.html" />
+    <link rel="next" href="products.html" />
     
     
-    <link rel="prev" href="shipments.html" />
+    <link rel="prev" href="configuration.html" />
     
 
     </head>
@@ -141,7 +141,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="stock-management.html">
+        <li class="chapter active" data-level="1.5" data-path="stock-management.html">
             
                 <a href="stock-management.html">
             
@@ -180,7 +180,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="update.html">
+        <li class="chapter " data-level="1.8" data-path="update.html">
             
                 <a href="update.html">
             
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Update</a>
+        <a href="." >Stock management</a>
     </h1>
 </div>
 
@@ -251,18 +251,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="update">Update</h1>
-<p>Please follow this guideline to update your YellowCube Magento 2 Extension in an existing installation.</p>
-<h2 id="composer-">Composer <a id="method-b-using-the-admin-interface"></a></h2>
-<p>If you have already installed your plugin through <a href="installation.html#using-the-admin-interface">Composer</a> the easiest way to update is to run the following commands:</p>
-<pre><code class="lang-text">composer update swisspost-yellowcube/magento2-yellowcube
-bin/magento setup:upgrade
-</code></pre>
-<h2 id="always-test-after-updates-">Always test after updates <a id="always-test-after-updates"></a></h2>
-<p>Make sure to test the connection after any update.</p>
-<p>We recommend you to go to the YellowCube <a href="configuration.html#basic-configuration">configuration page</a> and hit <em>Save config</em>.</p>
-<p>Additionally, we highly recommend you to check <a href="products.html#product-registration-and-update">updating a product</a> and <a href="shipments.html">place an order</a> to make sure everything works as expected.</p>
-<p>If there is an unexpected error message, first double check the certificate path and filename matches the configuration.</p>
+                                <h1 id="stock-management">Stock management</h1>
+<p>Magento 2 allows you to manage inventory regardless of the warehouse location. There are two steps to have Stock management in place.</p>
+<h2 id="sources">Sources</h2>
+<p>Sources describe the physical locations where products are managed. Go to <strong>Store &gt; Inventory &gt; Sources</strong> to open the Sources configuration page. </p>
+<p>Upon enabling the extension, the Sources list should already contain YellowCube source.</p>
+<p>The YellowCube source must be enabled. </p>
+<p><img src="assets/magento2_yellowcube_stock_sources.png" alt=""></p>
+<h2 id="stocks">Stocks</h2>
+<p>Stocks is a virtual inventory of your products available for sale through your sales channels.</p>
+<p>Similarly to sources, the YellowCube Magento 2 extension creates and configures YellowCube stock entity. Keep in mind that YellowCube stock must have a valid YellowCube source assigned.</p>
+<p><img src="assets/magento2_yellowcube_stock_stocks.png" alt=""></p>
+<h2 id="reports">Reports</h2>
+<p>YellowCube Magento 2 Extension creates a stock report about available product quantities.</p>
+<p>Access the page by navigating to <strong>Reports &gt; Products &gt; YellowCube Stock</strong>.</p>
+<p><img src="assets/magento2_yellowcube_reports.png" alt=""></p>
+<p>The table displays a list of YellowCube articles with the following columns:</p>
+<ul>
+<li><em>YellowCube Article No</em>: The remote YellowCube identifier.</li>
+<li><em>SKU</em>: The local SKU.</li>
+<li><em>Product</em>: The referenced product in the Magento 2 shop.</li>
+<li><em>Quantity</em>: The available quantity in the YellowCube stock.</li>
+<li>In case the <a href="products.html#advanced-lot-management">lot management is enabled</a> for a product the following columns have values:<ul>
+<li><em>Lot</em>: The YellowCube lot identifier.</li>
+<li><em>Best Before Date</em>: The expiration date.</li>
+</ul>
+</li>
+</ul>
+<p>Use each of the table columns above as filter option. </p>
+<p>The Stock inventory data synchronises with YellowCube on a daily basis. See <a href="background-updates.html">Background updates</a> for more details.</p>
 
                                 
                                 </section>
@@ -290,12 +307,12 @@ bin/magento setup:upgrade
 
             
                 
-                <a href="shipments.html" class="navigation navigation-prev " aria-label="Previous page: Shipments">
+                <a href="configuration.html" class="navigation navigation-prev " aria-label="Previous page: Configuration">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="background-updates.html" class="navigation navigation-next " aria-label="Next page: Background updates">
+                <a href="products.html" class="navigation navigation-next " aria-label="Next page: Products">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -306,7 +323,7 @@ bin/magento setup:upgrade
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update","level":"1.8","depth":1,"next":{"title":"Background updates","level":"1.9","depth":1,"path":"background-updates.md","ref":"background-updates.md","articles":[]},"previous":{"title":"Shipments","level":"1.7","depth":1,"path":"shipments.md","ref":"shipments.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"update.md","mtime":"2020-04-17T13:46:50.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-17T13:48:01.767Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Stock management","level":"1.5","depth":1,"next":{"title":"Products","level":"1.6","depth":1,"path":"products.md","ref":"products.md","articles":[]},"previous":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stock-management.md","mtime":"2020-04-17T13:46:50.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-17T13:48:01.767Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

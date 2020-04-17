@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="compatibility.html" />
+    <link rel="next" href="stock-management.html" />
     
     
-    <link rel="prev" href="installation.html" />
+    <link rel="prev" href="requirements.html" />
     
 
     </head>
@@ -94,7 +94,7 @@
                 <a href="./">
             
                     
-                    Introduction
+                    YellowCube Magento 2 Extension
             
                 </a>
             
@@ -102,25 +102,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="requirements.html">
-            
-                <a href="requirements.html">
-            
-                    
-                    Requirements and dependencies
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="installation.html">
+        <li class="chapter " data-level="1.2" data-path="installation.html">
             
                 <a href="installation.html">
             
                     
                     Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    Requirements
             
                 </a>
             
@@ -141,12 +141,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="compatibility.html">
+        <li class="chapter " data-level="1.5" data-path="stock-management.html">
             
-                <a href="compatibility.html">
+                <a href="stock-management.html">
             
                     
-                    Compatibility
+                    Stock management
             
                 </a>
             
@@ -154,7 +154,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="update.html">
+        <li class="chapter " data-level="1.6" data-path="products.html">
+            
+                <a href="products.html">
+            
+                    
+                    Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="shipments.html">
+            
+                <a href="shipments.html">
+            
+                    
+                    Shipments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="update.html">
             
                 <a href="update.html">
             
@@ -167,74 +193,16 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="admin_guide.html">
+        <li class="chapter " data-level="1.9" data-path="background-updates.html">
             
-                <a href="admin_guide.html">
+                <a href="background-updates.html">
             
                     
-                    Store admin guide
+                    Background updates
             
                 </a>
             
 
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.7.1" data-path="products_admin.html">
-            
-                <a href="products_admin.html">
-            
-                    
-                    Products
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.2" data-path="orders_admin.html">
-            
-                <a href="orders_admin.html">
-            
-                    
-                    Order
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.3" data-path="stock.html">
-            
-                <a href="stock.html">
-            
-                    
-                    Stock
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.4" data-path="activity-log.html">
-            
-                <a href="activity-log.html">
-            
-                    
-                    Activity Log
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -284,45 +252,77 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="configuration">Configuration</h1>
-<h2 id="basic-configuration">Basic configuration</h2>
-<p>You will find the YellowCube configuration section under the <em>WooYellowCube</em> main menu item in the side administration toolbar.</p>
-<p>The fields below <strong>Personal informations</strong> need to be filled out with the information you have received by the YellowCube customer service. The field &quot;Sender&quot; is case sensitive.</p>
-<p>The fields below <strong>Technical information</strong> need to be setup.</p>
+<h2 id="basic-configuration-">Basic configuration <a id="basic-configuration"></a></h2>
+<p>You will find the YellowCube configuration section under: <strong>Stores</strong> &gt; <strong>Configuration</strong> &gt; <strong>Sales</strong> &gt; <strong>Shipping Methods</strong>.</p>
+<p><img src="assets/magento2_yellowcube_configuration.png" alt=""></p>
+<p>The fields below <strong>SwissPost YellowCube</strong> need to be setup.</p>
+<h4 id="fields-obtained-from-the-yellowcube">Fields obtained from the YellowCube:</h4>
 <ul>
-<li><em>SOAP url</em>: URLs of SOAP services for different operating modes. <a href="https://service.swisspost.ch/apache/yellowcube/?wsdl" target="_blank">https://service.swisspost.ch/apache/yellowcube/?wsdl</a> should
-be used for production websites.</li>
-<li><em>Operating mode</em>: Choose between <em>Testing and Production</em><ul>
+<li><em>Sender ID</em>: The shop ID.</li>
+<li><em>Receiver</em>: The receiver value. The default value is set to <code>YELLOWCUBE</code>.</li>
+<li><em>Depositor Number</em>: This number will be assigned to you by Swiss Post.</li>
+<li><em>Partner Number</em>: The unique number in the YellowCube system.</li>
+<li><em>Plant-ID</em>: The storage location.</li>
+</ul>
+<h4 id="connection-details">Connection details:</h4>
+<ul>
+<li><em>Title</em>: The title of the plugin.</li>
+<li><em>Enabled for Checkout</em>: Whether the extension is enabled in the checkout process or not.</li>
+<li><em>Operating mode</em><strong>:</strong> Choose between Testing, Production, or Development.<ul>
 <li>In Testing mode orders are processed virtually. Documents, labels etc. are printed out and scanned. This mode is for testing purposes.</li>
 <li>Production mode needs to be set when the website is live and working.</li>
 <li>Development mode is only intended to be used by developers. YellowCube users should never use this mode.</li>
 </ul>
 </li>
-<li><em>Authentification</em>: Should be enabled if you are using certificate file to authenticate with YellowCube.</li>
-<li><em>Authentification file</em>: If the certificate authentication is used provide path to the certificate file on the
-server in this field (relative to the folder of the WooYellowCube extension).</li>
+<li><em>Custom URL</em>: Whether to enable the custom endpoint URL.<ul>
+<li><em>URL to the Endpoint</em>: The YellowCube SOAP custom EntryPoint for the selected operating mode.</li>
 </ul>
-<p>Define how many days logs will be kept in the database in the <strong>Logs</strong> section. We suggest you start with 30 days and then reduce it if the amount of log items becomes an issue.</p>
-<p>Note that you need to provide the IP address of your WooCommerce Shop to YellowCube for giving your shop access to YellowCube. This can also affect the configuration for any staging/development envirnoments. Consult your dedicated service provider for more informations about that.</p>
-<p><img src="assets/Informations_testing_v2.png" alt=""></p>
-<p>Every time you save the settings form all states and caches are cleared. Background processes will re-run with the
-next trigger. This reduces issues when switching between Testing / Production and different accounts. However product registration states remain stale.</p>
-<p>Limitation: Do NOT connect multiple shop instances to the same YellowCube account as WAR request (hourly cron
-containing confirming shippings with track &amp; trace) can not be shared.</p>
-<h2 id="production-go-live">Production go live</h2>
-<p>Once you are ready for production use, change the operating mode settings accordingly:</p>
-<p><img src="assets/Informations_production_v2_crop.png" alt=""></p>
-<p>Note that all previously registered articles need to be sent again to registration in production.
-There is no bulk operation yet to automate this process.</p>
-<p>Limitation: If a previously successfully submitted product is not resent after switching the operating mode or account, order submissions containing such a product will fail.</p>
-<h2 id="shipping">Shipping</h2>
-<p>YellowCube relies on <a href="https://docs.woocommerce.com/document/setting-up-shipping-zones/" target="_blank">shipping zones (WooCommerce documentation)</a> so you should configure them according to your business logic first. If unsure how to do that check the <a href="https://docs.woocommerce.com/document/setting-up-shipping-zones/" target="_blank">relevant section of the WooCommerce documentation pages</a>.</p>
-<p>Once you have configured shipping zones and added the desired shipping methods to them you will be able to configure YellowCube specific configuration for each of them. You will be able to do that on the configuration page that can be found by navigating to <em>WooYellowCube -&gt; Shipping</em>:</p>
-<p><img src="assets/Shipping_v2.png" alt=""></p>
-<p>The page lists all shipping methods (grouped by zones) and allows you to configure YellowCube for each of them separately. YellowCube can be enabled by selecting <em>Activated</em> in the <em>Status</em> dropdown for the relevant shipping zone/method.</p>
-<p>Orders still can be manually sent to YellowCube on each <a href="orders_admin.html#edit-order-for-details">order detail page</a> even if a matched zone is deactivated for YellowCube.</p>
-<p>The other two dropdowns (<em>BasicShippingServices</em> and <em>AdditionalShippingServices</em>) allow you to select the YellowCube product that should be used.  You will find more detailed information about those in the YellowCube Interface Manual.</p>
-<h2 id="activity-log">Activity Log</h2>
-<p>Check the <a href="activity-log.html">activity log</a> to see the activity on your website.</p>
+</li>
+<li><em>Certificate Path and Filename</em>: If the certificate authentication is used, provide path to the certificate file on the server in this field (relative to the folder of the Magento 2 YellowCube extension). For security reasons, the certificate must be placed outside of the public root directory.</li>
+<li><em>Certificate Password</em>: The password to the certificate if this authentication method is used. For security reasons, it is recommended to protect your certificate with a password.</li>
+<li><em>Debug</em>: This setting will enable logging and it is relevant for development purposes.</li>
+</ul>
+<h4 id="shipping-information">Shipping information:</h4>
+<ul>
+<li><em>Shipping Method</em>: The list of available shipping methods. You can choose one or multiple supported YellowCube shipping methods and define price for each of these shipping methods.</li>
+<li><em>Tara Factor</em>: <em>Gross Weight</em> is required for YellowCube. This can be calculated with Tara Factor: <em>Gross Weight = Net Weight x Tara Factor.</em></li>
+<li><em>Ship to Applicable Countries</em>: The list of allowed countries for shipping purposes.</li>
+<li><em>Ship to Specific Countries</em>: Use this list to select the allowed countries for shipping.</li>
+</ul>
+<p>Note that you need to provide the IP address of your Magento 2 Shop to YellowCube for giving your shop access to YellowCube. This can also affect the configuration for any staging/development environments. Consult your dedicated service provider for more informations about that.</p>
+<p>Every time you save the settings form all states and caches are cleared. Background processes will re-run with the next trigger. This reduces issues when switching between Testing / Production and different accounts. However product registration states remain stale.</p>
+<p><em>Limitation</em>: Do NOT connect multiple shop instances to the same YellowCube account as WAR request (hourly cron containing confirming shippings with track &amp; trace) can not be shared.</p>
+<h2 id="synchronisation">Synchronisation</h2>
+<p>On the configuration form, you are able to use the following synchronisation options:</p>
+<ul>
+<li><em>Resend Product Data to YellowCube</em>: Each product in your Magento 2 shop can be enabled for the synchronisation with YellowCube. Clicking this button will send all the relevant information to YellowCube about your products.</li>
+<li><em>Get Current Stock Data from YellowCube</em>: This button will update the stock data for each YellowCube product in your catalog</li>
+</ul>
+<p><img src="assets/magento2_yellowcube_configuration_synchronization.png" alt=""></p>
+<h2 id="custom-shipping-methods&#x200C;-">Custom Shipping Methods&#x200C; <a id="production-go-live"></a></h2>
+<p>The list of known shipping methods can be extend in <code>app/etc/config.php</code>. For example:</p>
+<pre><code class="lang-php">    <span class="hljs-string">&apos;system&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;default&apos;</span> =&gt; [
+            <span class="hljs-string">&apos;carriers&apos;</span> =&gt; [
+                <span class="hljs-string">&apos;yellowcube&apos;</span> =&gt; [
+                    <span class="hljs-string">&apos;methods&apos;</span> =&gt; [
+                        <span class="hljs-string">&apos;eco&apos;</span> =&gt; [
+                            <span class="hljs-string">&apos;label&apos;</span> =&gt; <span class="hljs-string">&apos;PostPac Economy CHANGED&apos;</span>,
+                            <span class="hljs-string">&apos;code&apos;</span> =&gt; <span class="hljs-string">&apos;ECO&apos;</span>,
+                        ],
+                        <span class="hljs-string">&apos;extra&apos;</span> =&gt; [
+                            <span class="hljs-string">&apos;label&apos;</span> =&gt; <span class="hljs-string">&apos;Extra new option&apos;</span>,
+                            <span class="hljs-string">&apos;code&apos;</span> =&gt; <span class="hljs-string">&apos;ECO EXTRA&apos;</span>,
+                            <span class="hljs-string">&apos;real_code&apos;</span> =&gt; <span class="hljs-string">&apos;ECO&apos;</span>,
+                            <span class="hljs-string">&apos;additional&apos;</span> =&gt; <span class="hljs-string">&apos;EXTRA&apos;</span>,
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+</code></pre>
+<p>Before making configuration changes make sure to export the whole configuration and then adjust it. See <a href="https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-export.html" target="_blank">Export the configuration</a> for more details.</p>
 
                                 
                                 </section>
@@ -350,12 +350,12 @@ There is no bulk operation yet to automate this process.</p>
 
             
                 
-                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                <a href="requirements.html" class="navigation navigation-prev " aria-label="Previous page: Requirements">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="compatibility.html" class="navigation navigation-next " aria-label="Next page: Compatibility">
+                <a href="stock-management.html" class="navigation navigation-next " aria-label="Next page: Stock management">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -366,7 +366,7 @@ There is no bulk operation yet to automate this process.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.4","depth":1,"next":{"title":"Compatibility","level":"1.5","depth":1,"path":"compatibility.md","ref":"compatibility.md","articles":[]},"previous":{"title":"Installation","level":"1.3","depth":1,"path":"installation.md","ref":"installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"configuration.md","mtime":"2020-01-30T10:53:01.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-30T10:54:07.596Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.4","depth":1,"next":{"title":"Stock management","level":"1.5","depth":1,"path":"stock-management.md","ref":"stock-management.md","articles":[]},"previous":{"title":"Requirements","level":"1.3","depth":1,"path":"requirements.md","ref":"requirements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"configuration.md","mtime":"2020-04-17T13:46:50.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-17T13:48:01.767Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

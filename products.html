@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Update · GitBook</title>
+        <title>Products · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="background-updates.html" />
+    <link rel="next" href="shipments.html" />
     
     
-    <link rel="prev" href="shipments.html" />
+    <link rel="prev" href="stock-management.html" />
     
 
     </head>
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="products.html">
+        <li class="chapter active" data-level="1.6" data-path="products.html">
             
                 <a href="products.html">
             
@@ -180,7 +180,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="update.html">
+        <li class="chapter " data-level="1.8" data-path="update.html">
             
                 <a href="update.html">
             
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Update</a>
+        <a href="." >Products</a>
     </h1>
 </div>
 
@@ -251,18 +251,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="update">Update</h1>
-<p>Please follow this guideline to update your YellowCube Magento 2 Extension in an existing installation.</p>
-<h2 id="composer-">Composer <a id="method-b-using-the-admin-interface"></a></h2>
-<p>If you have already installed your plugin through <a href="installation.html#using-the-admin-interface">Composer</a> the easiest way to update is to run the following commands:</p>
-<pre><code class="lang-text">composer update swisspost-yellowcube/magento2-yellowcube
-bin/magento setup:upgrade
-</code></pre>
-<h2 id="always-test-after-updates-">Always test after updates <a id="always-test-after-updates"></a></h2>
-<p>Make sure to test the connection after any update.</p>
-<p>We recommend you to go to the YellowCube <a href="configuration.html#basic-configuration">configuration page</a> and hit <em>Save config</em>.</p>
-<p>Additionally, we highly recommend you to check <a href="products.html#product-registration-and-update">updating a product</a> and <a href="shipments.html">place an order</a> to make sure everything works as expected.</p>
-<p>If there is an unexpected error message, first double check the certificate path and filename matches the configuration.</p>
+                                <h1 id="products">Products</h1>
+<p>A product that is managed by YellowCube needs to be registered first.</p>
+<h2 id="product-list-">Product list <a id="product-list"></a></h2>
+<p>The registration status of each products can be seen on the product listing page (<strong>Catalog &gt; Products</strong>):</p>
+<p><img src="assets/magento2_yellowcube_products.png" alt=""></p>
+<p>The possible values in the YellowCube column are:</p>
+<ul>
+<li><em>Not connected</em>: Product is not connected to YellowCube.</li>
+<li><em>Synced</em>: YellowCube confirmed that it received and processed the product information. Everything seems to be OK.</li>
+<li><em>Error</em>: YellowCube was unable to process the product information. Check the log next to the label to learn more.</li>
+</ul>
+<p><em>Quantity per Source</em> describes the total number of items in the YellowCube stock source. </p>
+<p><em>Salable Quantity</em> provides the number of items items in the stock that can be used for new orders. <code>Salable Quantity = YellowCube stock - Pending orders</code>.</p>
+<h2 id="edit-product-details-">Edit product details <a id="edit-product-details"></a></h2>
+<p>In order to register a product at YellowCube successfully it needs to meet the following requirements:</p>
+<ul>
+<li><em>SKU</em>: required field, used as primary product identifier. Changes are not supported after registration at YellowCube.</li>
+<li><em>Weight</em>: in kilograms (kg).</li>
+<li><em>Dimensions (length, width, height)</em>: in cm, not strictly required. However, it is recommended to provide this information.</li>
+<li><em>Assigned sources</em>: required to add YellowCube source for products managed with YellowCube.</li>
+</ul>
+<p><img src="assets/magento2_yellowcube_products_sources.png" alt=""></p>
+<p>Detailed information about YellowCube communication about the product is available at the bottom of the product edit page.</p>
+<p>In order enable product synchronisation with YellowCube you need to enable <em>Sync with YellowCube</em>. Click <em>Save</em> to confirm the product changes.</p>
+<p><img src="assets/magento2_yellowcube_products_yellowcube.png" alt=""></p>
+<h2 id="advanced-using-ean-">Advanced: Using EAN <a id="disconnect-from-yellowcube"></a></h2>
+<p>YellowCube supports <em>EAN</em> (European Article Numbers) values with the following options:</p>
+<ul>
+<li>EAN Type</li>
+<li>EAN Code</li>
+</ul>
+<p>EAN code typically contains 8 or 13 characters. YellowCube will use them to better identify labelled products.</p>
+<h2 id="advanced-lot-management-">Advanced: Lot management <a id="advanced-lot-management"></a></h2>
+<p>In order to deal with expiring products, you can enable lot management by choosing <em>Lot management</em> and submitting a product update.</p>
+<p>You can&apos;t deactivate lot management once it has been enabled. Even after disconnecting the product, it needs manual delete at YellowCube to re-add it without lot management again. Before enabling lot management you need to consider all implications of such action. If you are unsure about that please contact Swiss Post support for more information.</p>
+<h2 id="disconnect-from-yellowcube-">Disconnect from YellowCube <a id="disconnect-from-yellowcube"></a></h2>
+<p>A product can be disconnected from YellowCube by disabling the <em>Sync with YellowCube</em> option. The option is visible under Yellow Cube tab at the bottom of the product edit page.</p>
+<p>Disconnected products will not be sent to YellowCube as order items if they are part of an order.</p>
+<p>If you later reconnect the product again, it will match the previously created product at YellowCube again based on the SKU.</p>
 
                                 
                                 </section>
@@ -290,12 +317,12 @@ bin/magento setup:upgrade
 
             
                 
-                <a href="shipments.html" class="navigation navigation-prev " aria-label="Previous page: Shipments">
+                <a href="stock-management.html" class="navigation navigation-prev " aria-label="Previous page: Stock management">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="background-updates.html" class="navigation navigation-next " aria-label="Next page: Background updates">
+                <a href="shipments.html" class="navigation navigation-next " aria-label="Next page: Shipments">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -306,7 +333,7 @@ bin/magento setup:upgrade
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update","level":"1.8","depth":1,"next":{"title":"Background updates","level":"1.9","depth":1,"path":"background-updates.md","ref":"background-updates.md","articles":[]},"previous":{"title":"Shipments","level":"1.7","depth":1,"path":"shipments.md","ref":"shipments.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"update.md","mtime":"2020-04-17T13:46:50.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-17T13:48:01.767Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Products","level":"1.6","depth":1,"next":{"title":"Shipments","level":"1.7","depth":1,"path":"shipments.md","ref":"shipments.md","articles":[]},"previous":{"title":"Stock management","level":"1.5","depth":1,"path":"stock-management.md","ref":"stock-management.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"products.md","mtime":"2020-04-17T13:46:50.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-17T13:48:01.767Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
