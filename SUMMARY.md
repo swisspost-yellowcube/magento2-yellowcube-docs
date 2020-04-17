@@ -1,14 +1,12 @@
-# Summary
+# Table of contents
 
-* [Introduction](README.md)
-* [Requirements and dependencies](requirements.md)
+* [YellowCube Magento 2 Extension](README.md)
 * [Installation](installation.md)
+* [Requirements](requirements.md)
 * [Configuration](configuration.md)
-* [Compatibility](compatibility.md)
+* [Stock management](stock-management.md)
+* [Products](products.md)
+* [Shipments](shipments.md)
 * [Update](update.md)
-* [Store admin guide](admin_guide.md)
-  * [Products](products_admin.md)
-  * [Order](orders_admin.md)
-  * [Stock](stock.md)
-  * [Activity Log](activity-log.md)
+* [Background updates](background-updates.md)
 
