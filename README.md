@@ -10,3 +10,15 @@ This document is publicly developed on [GitHub](https://github.com/swisspost-yel
 
 If you need any support by the YellowCube team please contact us at [yellowcube.ch](https://www.post.ch/en/business-solutions/logistics-and-warehousing/yellowcube/yellowcube-contact-form) or by phone [+41 58 386 48 08](tel:+41583864808).
 
+# Table of contents
+
+* [YellowCube Magento 2 Extension](README.md)
+* [Requirements](requirements.md)
+* [Installation](installation.md)
+* [Configuration](configuration.md)
+* [Update](update.md)
+* [Background updates](background-updates.md)
+* [Store administration guide](administration_guide.md)
+  * [Products](products.md)
+  * [Shipments](shipments.md)
+  * [Stock management](stock_management.md)
