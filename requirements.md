@@ -14,7 +14,7 @@ In order to use the YellowCube Magento 2 extension you will need to meet the fol
    * _MySQL database_: MySQL version 5.6 or greater OR MariaDB version 10.0 or greater is required.
 4. **HTTPS support**: eCommerce websites usually deal with potentially sensitive information. In order to protect those we **strongly** suggest using HTTPS encryption. If you are not sure where to get the certificates we suggest you to check [Let's encrypt, the free, automated and open certificate authority](https://letsencrypt.org/).
 5. **YellowCube PHP SDK**: YellowCube Magento 2 Extension depends on the [official PHP SDK](https://github.com/swisspost-yellowcube/yellowcube-php). If you will install the plugin using the [suggested method](installation.md) you don't need to do anything as it is already bundled in the official package.
-6. **Store locale**: ****Keep in mind that the store locale must be set to one of the following locale codes supported by YellowCube:
+6. **Store locale**: Keep in mind that the store locale must be set to one of the following locale codes supported by YellowCube:
    * `DE`
    * `FR`
    * `IT`
