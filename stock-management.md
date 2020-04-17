@@ -10,7 +10,7 @@ Upon enabling the extension, the Sources list should already contain YellowCube 
 
 The YellowCube source must be enabled. 
 
-![](.gitbook/assets/magento2_yellowcube_stock_sources.png)
+![](assets/magento2_yellowcube_stock_sources.png)
 
 ## Stocks
 
@@ -18,7 +18,7 @@ Stocks is a virtual inventory of your products available for sale through your s
 
 Similarly to sources, the YellowCube Magento 2 extension creates and configures YellowCube stock entity. Keep in mind that YellowCube stock must have a valid YellowCube source assigned.
 
-![](.gitbook/assets/magento2_yellowcube_stock_stocks.png)
+![](assets/magento2_yellowcube_stock_stocks.png)
 
 ##  Reports
 
@@ -26,7 +26,7 @@ YellowCube Magento 2 Extension creates a stock report about available product qu
 
 Access the page by navigating to **Reports &gt; Products &gt; YellowCube Stock**.
 
-![](.gitbook/assets/magento2_yellowcube_reports.png)
+![](assets/magento2_yellowcube_reports.png)
 
 The table displays a list of YellowCube articles with the following columns:
 

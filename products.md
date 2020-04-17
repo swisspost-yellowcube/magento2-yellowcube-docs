@@ -6,7 +6,7 @@ A product that is managed by YellowCube needs to be registered first.
 
 The registration status of each products can be seen on the product listing page \(**Catalog &gt; Products**\):
 
-![](.gitbook/assets/magento2_yellowcube_products.png)
+![](assets/magento2_yellowcube_products.png)
 
 The possible values in the YellowCube column are:
 
@@ -27,13 +27,13 @@ In order to register a product at YellowCube successfully it needs to meet the f
 * _Dimensions \(length, width, height\)_: in cm, not strictly required. However, it is recommended to provide this information.
 * _Assigned sources_: required to add YellowCube source for products managed with YellowCube.
 
-![](.gitbook/assets/magento2_yellowcube_products_sources.png)
+![](assets/magento2_yellowcube_products_sources.png)
 
 Detailed information about YellowCube communication about the product is available at the bottom of the product edit page.
 
 In order enable product synchronisation with YellowCube you need to enable _Sync with YellowCube_. Click _Save_ to confirm the product changes.
 
-![](.gitbook/assets/magento2_yellowcube_products_yellowcube.png)
+![](assets/magento2_yellowcube_products_yellowcube.png)
 
 ## Advanced: Using EAN <a id="disconnect-from-yellowcube"></a>
 

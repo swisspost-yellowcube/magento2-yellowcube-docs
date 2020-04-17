@@ -20,9 +20,7 @@ In order to use the YellowCube Magento 2 extension you will need to meet the fol
    * `IT`
    * `EN-GB`
 
-{% hint style="info" %}
 For the general requirements please follow [Magento 2 system requirements](https://devdocs.magento.com/guides/v2.3/install-gde/system-requirements-tech.html).
-{% endhint %}
 
 ## License
 

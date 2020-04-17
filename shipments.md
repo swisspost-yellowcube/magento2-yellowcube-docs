@@ -6,7 +6,7 @@ When relevant orders are created they will be sent to YellowCube as soon as orde
 
 Go to **Sales &gt; Shipments** to access the Shipments overview page.
 
-![](.gitbook/assets/magento2_yellowcube_shipments.png)
+![](assets/magento2_yellowcube_shipments.png)
 
 The possible values in the YellowCube column are:
 

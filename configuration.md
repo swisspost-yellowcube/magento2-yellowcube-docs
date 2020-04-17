@@ -4,7 +4,7 @@
 
 You will find the YellowCube configuration section under: **Stores** &gt; **Configuration** &gt; **Sales** &gt; **Shipping Methods**.
 
-![](.gitbook/assets/magento2_yellowcube_configuration.png)
+![](assets/magento2_yellowcube_configuration.png)
 
 The fields below **SwissPost YellowCube** need to be setup.
 
@@ -50,7 +50,7 @@ On the configuration form, you are able to use the following synchronisation opt
 * _Resend Product Data to YellowCube_: Each product in your Magento 2 shop can be enabled for the synchronisation with YellowCube. Clicking this button will send all the relevant information to YellowCube about your products.
 * _Get Current Stock Data from YellowCube_: This button will update the stock data for each YellowCube product in your catalog
 
-![](.gitbook/assets/magento2_yellowcube_configuration_synchronization.png)
+![](assets/magento2_yellowcube_configuration_synchronization.png)
 
 ## Custom Shipping Methods‌ <a id="production-go-live"></a>
 

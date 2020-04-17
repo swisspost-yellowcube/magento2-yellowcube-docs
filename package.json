@@ -1,12 +1,12 @@
 {
-  "name": "wooyellowcube-docs",
+  "name": "magento2-yellowcube-docs",
   "version": "1.0.0",
-  "description": "Official documentation of the WooCommerce YellowCube plugin.",
-  "author": "Janez Urevc <janez.urevc@md-systems.ch>",
+  "description": "Official documentation of the YellowCube Magento 2 Extension.",
+  "author": "MD Systems <info@md-systems.ch>",
   "bugs": {
-    "url": "https://gitlab.com/swisspost-yellowcube/wooyellowcube-docs/issues"
+    "url": "https://github.com/swisspost-yellowcube/magento2-yellowcube-docs/issues"
   },
-  "homepage": "https://gitlab.com/swisspost-yellowcube/wooyellowcube-docs#README",
+  "homepage": "https://github.com/swisspost-yellowcube/magento2-yellowcube-docs#README.md",
   "dependencies": {
     "gitbook-cli": "^2.3.2"
   }
